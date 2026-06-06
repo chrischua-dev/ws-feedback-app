@@ -100,7 +100,7 @@ Build a single-page Next.js feedback application using a progressive architectur
 - [x] 3. Checkpoint - Verify local state implementation
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 4. Integrate AWS Amplify Gen 2 Data backend
+- [x] 4. Integrate AWS Amplify Gen 2 Data backend
   - [x] 4.1 Set up Amplify Gen 2 backend with data schema
     - Install AWS Amplify dependencies (`@aws-amplify/backend`, `aws-amplify`)
     - Create `amplify/data/resource.ts` with `Feedback` model schema (name: string required, rating: integer required, comment: string required)
@@ -108,13 +108,13 @@ Build a single-page Next.js feedback application using a progressive architectur
     - Create `amplify/backend.ts` to wire up the data resource
     - _Requirements: 5.1, 5.2_
 
-  - [-] 4.2 Configure Amplify client in the Next.js app
+  - [x] 4.2 Configure Amplify client in the Next.js app
     - Create `lib/amplify-config.ts` (or use `amplify_outputs.json`) for Amplify client configuration
     - Call `Amplify.configure()` at the app level (in page or layout)
     - Generate and import typed client using `generateClient<Schema>()`
     - _Requirements: 5.1, 5.2_
 
-  - [~] 4.3 Replace local state with Amplify Data operations
+  - [x] 4.3 Replace local state with Amplify Data operations
     - Update `app/page.tsx` to use Amplify Data client for create and list operations
     - On page load: fetch feedback entries via `client.models.Feedback.list()` sorted by createdAt descending
     - On submit: call `client.models.Feedback.create()` with form data
@@ -123,13 +123,13 @@ Build a single-page Next.js feedback application using a progressive architectur
     - Add new entry to top of list on successful save without page reload
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
 
-  - [ ]* 4.4 Write unit tests for Amplify integration error handling
+  - [x]* 4.4 Write unit tests for Amplify integration error handling
     - Test save failure displays error and preserves form data
     - Test load failure displays error message in list area
     - Mock Amplify client for isolated testing
     - _Requirements: 5.3, 5.4_
 
-- [~] 5. Final checkpoint - Ensure all tests pass
+- [x] 5. Final checkpoint - Ensure all tests pass
   - Ensure all tests pass, ask the user if questions arise.
 
 ## Notes
